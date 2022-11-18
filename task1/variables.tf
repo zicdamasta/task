@@ -10,3 +10,8 @@ variable "s3_bucket" {
   default     = "zicdamasta-my-tf-bucket"
 }
 
+variable "aws_availability_zone" {
+  description = "Default AWS Availability zone"
+  type        = string
+  default     = "eu-west-1a"
+}
