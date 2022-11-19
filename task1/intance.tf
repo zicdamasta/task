@@ -22,7 +22,7 @@ resource "aws_volume_attachment" "ebs_attach_1" {
   instance_id = aws_instance.foo.id
 }
 
-resource "aws_volume_attachment" "ebs_att" {
+resource "aws_volume_attachment" "ebs_attach_2" {
   device_name = "/dev/sdg"
   volume_id   = aws_ebs_volume.volume2.id
   instance_id = aws_instance.foo.id
