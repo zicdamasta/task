@@ -38,3 +38,5 @@ Please modify the YAML file to avoid this from happening in the future.
 
 ## Solution
 Add `terminationGracePeriodSeconds: XX` under container where XX is seconds. Also it is good idea to add lifecycle prestop hook with commands needed for graceful exit. It is possible to inject script into the pod and run it via this hook.
+
+Read more about hooks: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/
