@@ -30,4 +30,11 @@
 
 
 # Task 2
-TODO
+Following Kubernetes Deployment is designed to process HTTP requests with File
+Uploads, with a maximum request taking 20s total.
+During a rollout of new versions, we've noticed some long-running requests were
+getting killed in the middle of the request.
+Please modify the YAML file to avoid this from happening in the future.
+
+## Solution
+Add `terminationGracePeriodSeconds: XX` under container where XX is seconds. Also it is good idea to add lifecycle prestop hook with commands needed for graceful exit. It is possible to inject script into the pod and run it via this hook.
